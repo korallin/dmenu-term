@@ -19,3 +19,7 @@ In addition, the following non-standard params are added to the script:
 Terminal window class is set to `dmenu`, or if you provide a custom prompt via `-p` flag, it will be set to `dmenu-<prompt>`.
 
 You can then use your WM to set custom window size, position, etc. based on the class name.
+
+## Installation
+
+On Arch Linux you can use [dmenu-term](https://aur.archlinux.org/packages/dmenu-term/) package.
