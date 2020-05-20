@@ -1,5 +1,5 @@
+BIN := dmenu-term
 PROJECT := dmenu-term
-BIN := dmenu
 VERSION := 1.0.0
 
 PREFIX ?= /usr
