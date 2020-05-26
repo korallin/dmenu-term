@@ -13,6 +13,7 @@ In addition, the following non-standard params are added to the script:
 - `-k` - open `dmenu` in a terminal panel instead of a new window
 - `-f` - provide additional options to the fuzzy filter
 - `-0` - treat input as `\0` separated instead of `\n` separated
+- `-r` - provide a path to a script which will render preview for the current selection in a new window
 
 ## Window customizations
 
