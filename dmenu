@@ -34,7 +34,7 @@ kitty_class="dmenu"
 
 while getopts "vp:kr:0f:" OPTION; do
     case "$OPTION" in
-        v) echo 'dmenu-term v1.0.0'; exit 0 ;;
+        v) echo 'dmenu-term v1.1.0'; exit 0 ;;
         p) fzf_args="$fzf_args --prompt='$OPTARG> '"; kitty_class="$kitty_class-$OPTARG" ;;
 
         # custom options
