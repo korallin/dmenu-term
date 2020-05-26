@@ -18,7 +18,7 @@ install:
 	install -Dm644 -t "$(SHARE_DIR)/doc/$(PROJECT)/" README.md
 
 .PHONY: dist
-dist:
+dist: clean
 	mkdir -p dist
 	git archive -o "dist/$(PROJECT)-$(VERSION).tar.gz" --format tar.gz --prefix "$(PROJECT)-$(VERSION)/" "$(VERSION)"
 	gpg --detach-sign --armor "dist/$(PROJECT)-$(VERSION).tar.gz"
