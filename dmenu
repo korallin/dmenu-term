@@ -19,7 +19,7 @@ if [ -n "$FILTER_MODE" ]; then
         kitty @ launch --cwd "$PWD" --keep-focus --env "PREVIEW_MODE=1" --env "PREVIEW_SCRIPT=$PREVIEW_SCRIPT" "$self"
     fi
 
-    env FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS $FZF_OPTS" fzf < in > out
+    env FZF_DEFAULT_OPTS="$FZF_OPTS" fzf < in > out
 
     [ -n "$PREVIEW_SCRIPT" ] && kill $!
     touch done/1
@@ -29,7 +29,7 @@ fi
 tmp="$(mktemp -d)"
 trap 'rm -rf $tmp' EXIT
 
-fzf_args="--print-query"
+fzf_args="--print-query --reverse --multi"
 kitty_class="dmenu"
 
 while getopts "vp:kr:0f:" OPTION; do
