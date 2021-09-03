@@ -14,6 +14,7 @@ clean:
 .PHONY: install
 install:
 	install -Dm755 -t "$(BIN_DIR)/" $(BIN)
+	ln -s $(BIN) "$(BIN_DIR)/$(BIN)-wl"
 	install -Dm644 -t "$(SHARE_DIR)/licenses/$(PROJECT)/" LICENSE
 	install -Dm644 -t "$(SHARE_DIR)/doc/$(PROJECT)/" README.md
 
